@@ -1,12 +1,10 @@
-using System;
-
 namespace Full_GRASP_And_SOLID
 {
     public class ConsolePrinter : IPrinter
     {
-        public void PrintRecipe(Recipe recipe)
+        public void Print(ITextProvider textProvider)
         {
-            Console.WriteLine(recipe.GetTextToPrint());
+            Console.WriteLine(textProvider.GetTextToPrint());
         }
     }
 }
